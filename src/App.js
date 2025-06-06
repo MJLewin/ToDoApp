@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from './Dashboard'
+import './styles.css'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body'>
+      <Dashboard/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+// Build the components with hard coded data: 
+//   Dashboard
+//   ToDoList
+//   Task
+//   NewTaskBtn
+// Add some basic styling to assist with initial layout
+// Functionality:
+//   (Store them as state in the browser (non-persistent) for now)
+//   How to add tasks
+//   Delete tasks
+//   Edit tasks
+// Intermediate Functionality
+//   Mark tasks as complete
+//   Make data persistent via localStorage
+// Finish up styling
+// Add advanced features (redo this list with more specific steps)
+//   drag and drop reorder
+//   add multiple ToDoLists (add editListsView component)

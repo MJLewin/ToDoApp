@@ -1,0 +1,131 @@
+/* Base resets and font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #666;
+}
+
+/* Dashboard container */
+.dashboard {
+  max-width: 600px;
+  min-width: 325px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+/* Editable ToDo List Title */
+.todoTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.todoTitle:hover {
+  color: #42b9e4;
+  border: none;
+  outline: none;
+}
+
+/* Status display (e.g., "3 of 5 tasks completed") */
+.taskStatus {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* List of tasks */
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual task item */
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s ease-in-out;
+}
+
+.todoItem:hover {
+  background-color: #f9f9f9;
+}
+
+/* Left side: checkbox + label */
+.todoItemLeft {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Checkbox styling */
+.todoCheckbox {
+  margin-right: 12px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Task label */
+.todoLabel {
+  font-size: 16px;
+  cursor: pointer;
+  width: 95%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.todoLabel:hover {
+  background-color: #f9f9f9;
+}
+
+.todoLabel.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Right side: delete button */
+.todoDelete {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease-in-out;
+}
+
+.todoDelete:hover {
+  color: #e60000;
+}
+
+/* Add new task button */
+.addTaskButton {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #42b9e4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.addTaskButton:hover {
+  background-color: #1786bd;
+}
