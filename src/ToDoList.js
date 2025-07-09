@@ -9,6 +9,13 @@ function ToDoList({ tasks, setTasks }) {
     setTasks(updatedTasks)
   }
 
+  const updateTaskText = (id, newText) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, text: newText } : task
+    )
+    setTasks(updatedTasks)
+  }
+
   console.log("tasks: ", tasks)
   const todoList = tasks.map(({ id, text, isCompleted }) => (
     <Task
@@ -17,6 +24,7 @@ function ToDoList({ tasks, setTasks }) {
       text={text}
       isCompleted={isCompleted}
       onDelete={deleteTask}
+      onEdit={updateTaskText}
     />
   ))
   

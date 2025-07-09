@@ -1,5 +1,26 @@
+import { useState, useEffect } from "react"
 
-function Task({ id, text, isCompleted, onDelete }) {
+function Task({ id, text, isCompleted, onDelete, onEdit }) {
+  const [textValue, setTextValue] = useState(text)
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (textValue !== text) {
+        onEdit(id, textValue)
+      }
+    }, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [textValue, text, id, onEdit])
+
+  const handleChange = (e) => {
+    setTextValue(e.target.value)
+  }
+
+  const handleBlur = () => {
+    if (textValue !== text) {
+      onEdit(id, textValue)
+    }
+  }
 
   return (
     <div className='todoItem'>
@@ -13,7 +34,9 @@ function Task({ id, text, isCompleted, onDelete }) {
         <input
           type='text'
           className='todoLabel'
-          defaultValue={text}
+          value={textValue}
+          onChange={handleChange}
+          onBlur={handleBlur}
         >
         </input>
       </div>
